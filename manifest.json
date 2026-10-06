@@ -1,0 +1,39 @@
+{
+  "sap.app": {
+    "id": "com.cqu.holidayapi.table",
+    "type": "card"
+  },
+  "sap.card": {
+    "type": "Table",
+
+    "header": {
+      "title": "Australian Holidays 2025"
+    },
+
+    "data": {
+      "request": {
+        "url": "https://holidayapi.com/v1/holidays?country=AU&year=2025&key=38797474-161e-46e7-95aa-a448cc275c24"
+      },
+      "path": "/holidays"
+    },
+
+    "content": {
+      "row": {
+        "columns": [
+          {
+            "title": "Holiday",
+            "value": "{name}"
+          },
+          {
+            "title": "Date",
+            "value": "{date}"
+          },
+          {
+            "title": "Observed",
+            "value": "{observed}"
+          }
+        ]
+      }
+    }
+  }
+}
